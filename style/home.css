@@ -468,6 +468,7 @@ html {
 .projets {
     position: relative;
     overflow: hidden;
+    
 }
 .projets::before {
     content: "";
@@ -522,6 +523,7 @@ html {
     align-items: center;
     justify-content: center;
     padding-bottom: 300px;
+    
 }
 .contentcontact div:hover{
    transform: scale(1.3);
@@ -532,6 +534,10 @@ html {
  }
 .logo{
     width: 40px;
+}
+.contact{
+    padding-top: 60px;
+    margin-top: -60px;
 }
 
 
