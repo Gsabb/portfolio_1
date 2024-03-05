@@ -1,0 +1,555 @@
+* {
+    font-family: "Protest Riot", sans-serif;
+    font-style: normal;
+    margin: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.header-list{
+    list-style: none;
+    display: flex;
+    font-size: 28px;
+}
+.header {
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid darkgray;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Set the top position for the sticky header */
+    z-index: 1000;
+}
+.header-list li{
+    padding: 0px 40px;
+    transition: transform 0.3s ease;
+}
+.header-list li a{
+    text-decoration: none;
+    color: inherit;
+}
+.header-list li:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(255,255,255,0.5); /* Blurred border effect */
+}
+.apropos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(110deg, black 35%, transparent 90%);
+    padding-top: 60px;
+    margin-top: -60px;
+}
+.apropos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 250px; /* Adjust this to move the image left or right */
+    width: 100%;
+    height: 100%;
+    background-image: url('../static/bg.png');
+    background-size: cover;
+    background-position: center; /* Adjust this to reposition the image */
+    filter: brightness(50%) saturate(50%); /* Adjust brightness and saturation */
+    z-index: -1;
+}
+.pic{
+    width: 25%;
+    height: 25%;
+    border-radius: 90%;
+    border: 10px solid white;
+    box-shadow: 0 0 0 7px #9df41a;
+    margin: 100px 60px;
+}
+.highlight{
+    font-size: 30px;
+    color: #ffffd6;
+}
+.apropos > div {
+    display: flex;
+    color: white;
+}
+.info{
+    font-size: 27px;
+    padding: 60px 100px 150px 50px;
+    text-align: justify;
+}
+.titre{
+    padding-bottom: 30px;
+    color: white;
+    text-shadow: 5px 5px  #e56b21; 
+    font-size: 80px;
+}
+.info :nth-child(2){
+    padding: 30px 0px;
+    padding-left: 40px;
+    line-height: 140%;
+    
+}
+.info :nth-child(3){
+    padding: 30px 0px;
+    padding-left: 40px;
+    font-style: italic;
+    color: lightgray
+}
+.info :nth-child(4){
+    font-style: italic;
+    color: lightgray;
+}
+.transit{
+    width: 100%;
+    opacity: 1;
+}
+.apropos::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px; /* Height of the fade effect */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+    z-index: 2;
+}
+.experience {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding-top: 60px;
+    margin-top: -60px;
+}
+.titre2{
+    font-size: 90px;
+    padding: 60px 0px;
+}
+.graph{
+    width: 100%;
+    box-shadow: 0 0 8px 15px white; 
+}
+.infoexp{
+    display: flex;
+    justify-content: space-between;
+    color: #e68e00;
+    text-shadow: 2px 2px rgba(255, 255, 255, 1);
+    opacity: 0;
+}
+.info1{
+    width: 50%;
+    padding-left:3%;
+}
+.info2{
+    width: 40%;
+    box-shadow: rgb(0, 0, 0, 0.6) 10px 11px 25px 5px;
+    margin-right: 3%;
+    border-radius: 20px;
+    background-color: #fff1db;
+    border: 3px solid rgb(231, 112, 39, 0.4);
+}
+.legende{
+    position:absolute;
+    right: 48%;
+    color: grey;
+}
+#titreinfo{
+    font-size: 40px;
+    text-align: left;
+    padding: 20px 20px 10px 20px;    
+}
+.info2 :nth-child(2){
+    text-align: justify;
+    font-size: 30px;
+    padding: 20px;
+    
+}
+.background-container{
+    position: relative;
+    z-index: 1;
+}
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../static/bg3.png'), url('../static/bg2.png');
+    background-position: left, right; /* Adjust as needed */
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Adjust the opacity as needed */
+    z-index: -1;
+  }
+.content {
+    position: relative;
+    z-index: 2;
+}
+.space{
+    height: 200px;
+  }
+.transit2{
+    rotate: 180deg;
+    width: 100%;
+    margin-bottom: -10px;
+}
+/* Image Container Gauche à droite */
+.image-container4 {
+    position: relative;
+    width: 30vw; /* Set to the width of your images */
+    height: auto; /* Set to the height of your images */
+    cursor: pointer;
+}
+.image-container4 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+}
+.image-container4 div{
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+}
+.emerge-image4 {
+    opacity: 0; /* Start fully transparent */
+}
+.image-container4:hover .emerge-image41 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(103%); /* Move up and left on hover */
+}
+.image-container4:hover .emerge-image42 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(65%) translateX(51%); /* Move up on hover */
+}
+.image-container4:hover .emerge-image43 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(212%); /* Move up on hover */
+}
+
+/* You might need to adjust z-index if you want certain images to appear over others */
+.base-image4 {
+    z-index: 1;
+}
+.emerge-image4 {
+    z-index: 2;
+}
+/* Image Container Gauche à droite */
+.image-container {
+    position: relative;
+    width: 30vw; /* Set to the width of your images */
+    height: auto; /* Set to the height of your images */
+    cursor: pointer;
+}
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+}
+.emerge-image {
+    opacity: 0; /* Start fully transparent */
+}
+.image-container:hover .emerge-image1 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(103%); /* Move up and left on hover */
+}
+.image-container:hover .emerge-image2 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(130%); /* Move up on hover */
+}
+.image-container:hover .emerge-image3 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(210%); /* Move up on hover */
+}
+.image-container:hover .emerge-image4 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(103%) translateY(105%); /* Move up on hover */
+}
+/* You might need to adjust z-index if you want certain images to appear over others */
+.base-image {
+    z-index: 1;
+}
+.emerge-image {
+    z-index: 2;
+}
+
+
+/* Image Container Droite à Gauche */
+.image-container2 {
+    position: relative;
+    width: 28vw; /* Set to the width of your images */
+    height: auto; /* Set to the height of your images */
+    cursor: pointer;
+    min-height: fit-content;
+
+}
+.image-container2 img, .image-container2 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+
+}
+.image-container2 div{
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+}
+.emerge-image2 {
+    opacity: 0; /* Start fully transparent */
+}
+.image-container2:hover .emerge-image21 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(-103%); /* Move up and left on hover */
+}
+.image-container2:hover .emerge-image23 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(-220%); /* Move up on hover */
+}
+.image-container2:hover .emerge-image24 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(-70%) translateY(80%); /* Move up on hover */
+}
+
+/* You might need to adjust z-index if you want certain images to appear over others */
+.base-image2 {
+    z-index: 1;
+}
+.emerge-image2 {
+    z-index: 2;
+}
+.image-container3 {
+    position: relative;
+    width: 27vw; /* Set to the width of your images */
+    height: auto; /* Set to the height of your images */
+    cursor: pointer;
+    min-height: fit-content;
+
+}
+.image-container3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+
+}
+.image-container3 div{
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+}
+.emerge-image3 {
+    opacity: 0; /* Start fully transparent */
+}
+.image-container3:hover .emerge-image31 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(-102%); /* Move up and left on hover */
+}
+.image-container3:hover .emerge-image33 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateX(-230%) translateY(7%); /* Move up on hover */
+}
+.image-container3:hover .emerge-image34 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(105%); /* Move up on hover */
+}
+.image-container3:hover .emerge-image32 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(106%) translateX(-102%); /* Move up on hover */
+}
+.image-container3:hover .emerge-image35 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(210%) translateX(-102%); /* Move up on hover */
+}
+.image-container3:hover .emerge-image36 {
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(210%); /* Move up on hover */
+}
+
+/* You might need to adjust z-index if you want certain images to appear over others */
+.base-image3 {
+    z-index: 1;
+}
+.emerge-image3 {
+    z-index: 2;
+}
+.projets {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: flex-start; 
+    background-color: black;
+    height: 200vw;
+
+}
+.projet{
+    min-height: fit-content;
+}
+.projet3{
+    transform: translateX(33vw) translateY(40vw);
+}
+.projet2{
+    transform: translateX(33vw) translateY(68vw);
+}
+.projet1{
+    transform: translateX(-32vw) ;
+}
+.projet4{
+    transform: translateX(-32vw) translateY(54vw);
+}
+.pdf{
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+}
+.mesprojets{
+    color: white;
+    font-size: 90px;
+    padding: 100px;
+}
+.hoverme{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    transform: translateX(-32vw) translateY(250px);
+    z-index: 3;
+    opacity: 1;
+    font-style: italic;
+}
+.titreprojet {
+    color: lime;
+    text-shadow: 2px 2px rgb(255, 255, 255, 0.6);
+    font-size: 50px;
+    padding-bottom: 35px;
+}
+.titreprojet3{
+    color: #ff1a1a;
+    text-shadow: 2px 2px rgb(255, 255, 255, 1);
+}
+.titreprojet2{
+    color: #ff6600;
+    text-shadow: 2px 2px rgb(255, 255, 255, 1);
+}
+.titreprojet4{
+    color: #2066ff;
+    text-shadow: 2px 2px rgb(255, 255, 255, 1);
+}
+.emerge-image3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; /* Smooth transition for the effect */
+    width: 100%;
+    height: auto;
+}
+.base-image, .base-image2, .base-image3, .base-image4{
+    opacity:0;
+}
+.desc{
+    color: white;
+    font-size: 25px;
+    text-align: justify;
+}
+.techno{
+    padding-top:50px;
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+.projets {
+    position: relative;
+    overflow: hidden;
+}
+.projets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../static/bgproj2.png), url(../static/bgproj1.png);
+    background-position: top left, bottom right; /* Example positions */
+    opacity: 0.3; /* Adjust opacity as needed */
+    z-index: 0;
+}
+.joindre{
+    font-size: 90px;
+    text-align: center;
+    padding: 30px 0px;
+}
+.courriel{
+    font-size: 60px;
+    padding: 100px;
+}
+.courriel a{
+    text-decoration: none;
+    color: black;
+}
+.github{
+    font-size: 60px;
+    text-decoration: none;
+    padding: 100px;
+}
+.github a{
+    text-decoration: none;
+    color: black;
+}
+.phonetext{
+    font-size: 60px;
+    text-decoration: none;
+    color: black;
+}
+.num {
+    font-size: 40px;
+    padding:0
+}
+.tel{
+    text-align: center;
+    padding: 100px;
+}
+.contentcontact{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 300px;
+}
+.contentcontact div:hover{
+   transform: scale(1.3);
+   cursor: pointer;
+}
+.contentcontact div{
+    transition: all 0.3s ease;
+ }
+.logo{
+    width: 40px;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start from 20px below its final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in-up {
+    opacity: 0; /* Start invisible */
+    animation-name: fadeInUp;
+    animation-fill-mode: forwards; /* Keep the final state after animation completes */
+    animation-duration: 1s; /* Duration of the animation */
+    animation-timing-function: ease-out; /* Use "ease-out" for a smooth end */
+}
+
