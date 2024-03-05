@@ -400,13 +400,13 @@ html {
     transform: translateX(33vw) translateY(40vw);
 }
 .projet2{
-    transform: translateX(33vw) translateY(68vw);
+    transform: translateX(33vw) translateY(74vw);
 }
 .projet1{
     transform: translateX(-32vw) ;
 }
 .projet4{
-    transform: translateX(-32vw) translateY(54vw);
+    transform: translateX(-32vw) translateY(60vw);
 }
 .pdf{
     box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
